@@ -11,11 +11,16 @@
 <body>
     <h1>{{ $title }}</h1>
 
-    <ul>
-        @foreach ($array as $element)
-            <li>{{ $element }}</li>
-        @endforeach
-    </ul>
+    @if (count($array) < 3)
+        <h3>L'array non è abbastanza lungo</h3>
+    @else
+        <ul>
+            @foreach ($array as $element)
+                <li>{{ $element }}</li>
+            @endforeach
+        </ul>
+    @endif
+
 </body>
 
 </html>

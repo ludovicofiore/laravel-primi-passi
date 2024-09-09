@@ -17,7 +17,7 @@ Route::get('/', function () {
 
     $title = 'Sono il titolo della pagina';
 
-    $array = ['cerchio', 'quadrato', 'triangolo', 'rettangolo', 'trapezio'];
+    $array = ['cerchio', 'quadrato'];
 
     return view('home', compact('title', 'array'));
 });
