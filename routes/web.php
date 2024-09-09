@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $title = 'Sono il titolo della pagina';
+
+    $array = ['cerchio', 'quadrato', 'triangolo', 'rettangolo', 'trapezio'];
+
+    return view('home', compact('title', 'array'));
 });

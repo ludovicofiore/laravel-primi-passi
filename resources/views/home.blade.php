@@ -9,7 +9,13 @@
 </head>
 
 <body>
-    <h1>Hello World</h1>
+    <h1>{{ $title }}</h1>
+
+    <ul>
+        @foreach ($array as $element)
+            <li>{{ $element }}</li>
+        @endforeach
+    </ul>
 </body>
 
 </html>
