@@ -15,9 +15,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $title = 'Sono il titolo della pagina';
+    $title = 'Welcome to our page';
 
-    $array = ['cerchio', 'quadrato'];
+    $links = ['Home', 'About us', 'Contact us', 'Privacy'];
 
-    return view('home', compact('title', 'array'));
+    return view('home', compact('title', 'links'));
 });
+
+
+Route::get('/About-us', function () {
+    return view('about');
+});
+
+
+Route::get('/Contact-us', function () {
+    return view('contact');
+});
+
+Route::get('/Privacy', function () {
+    return view('privacy');
+});
+
